@@ -27,3 +27,7 @@ func (l *logrusLogger) Warn(args ...interface{}) {
 func (l *logrusLogger) Debug(args ...interface{}) {
 	l.logger.Debug(args...)
 }
+
+func (l *logrusLogger) Fatalf(fromat string, args ...interface{}) {
+	l.logger.Fatalf(fromat, args...)
+}

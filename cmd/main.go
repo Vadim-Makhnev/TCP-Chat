@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"os"
 
 	"github.com/Vadim-Makhnev/TCP-Chat/cmd/server"
@@ -13,7 +12,7 @@ func main() {
 	server := server.NewServer(logger)
 
 	if err := server.Run(); err != nil {
-		log.Fatalf("server error: %s", err)
+		logger.Fatalf("server error: %s", err)
 		os.Exit(1)
 	}
 }

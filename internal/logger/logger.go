@@ -5,6 +5,7 @@ type ILogger interface {
 	Warn(args ...any)
 	Error(args ...any)
 	Debug(args ...any)
+	Fatalf(format string, args ...interface{})
 }
 
 type LoggerType string
